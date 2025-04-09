@@ -1,0 +1,84 @@
+/* القيم الافتراضية (Light Mode) */
+:root {
+    --bg-color-primary: white;
+    --bg-color-secondary: #EEEEEE;
+    --text-color-primary: black;
+    --text-color-secondary: RGB(206, 18, 18);
+    --font-default:"Roboto","Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --padding: 1.5625rem 0.3125rem;
+    --margin-top: 0;
+    --margin-bottom: 0;  
+}
+  
+  /* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
+  [data-theme="dark"] {
+    --bg-color-primary: black;
+    --bg-color-secondary:#252525;
+    --text-color-primary: white;
+    --text-color-secondary: RGB(193, 126, 31);
+  }
+  
+  /* تطبيق المتغيرات على الصفحة */
+  body {
+    background-color: var(--bg-color-secondary);
+    color: var(--text-color-primary);
+    transition: background-color 0.3s, color 0.3s; /* تأثير انتقال */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+    font-family: var(--font-default);
+
+}
+.navbar{
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    transition: background-color 0.3s, color 0.3s; /* تأثير انتقال */
+}
+.container{
+    margin-inline: auto;
+    margin-top: var(--margin-top);
+    margin-bottom: var(--margin-bottom);
+    width: 100%;
+    padding: var(--padding);
+}
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    max-width: 1140px;
+}
+.navbar .container .nav-links{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-basis: 30%;
+}
+.nav-links li{
+    list-style: none;
+    padding: 5px 15px;
+
+}
+.nav-links a{
+    text-decoration: none;
+    color: var(--text-color-black-white);
+    font-size: 17px;
+    font-weight: 500;
+    transition: color 0.3s; /* تأثير انتقال */
+    font-family: var(--font-default);
+}
+.navbar .logo{
+    text-decoration: none;
+    color: var(--text-color-primary);
+    font-size: 30px;
+}
+.navbar .logo::after{
+    content: '.';
+    display: inline;
+    color: var(--text-color-secondary);
+    transition: width 0.3s; /* تأثير انتقال */
+}
