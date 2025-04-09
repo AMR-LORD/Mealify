@@ -2,59 +2,82 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mealify</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/style.css">
-    <link rel="stylesheet" href="./CSS/media.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mealify</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="stylesheet" href="./CSS/media.css">
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="container">
-            <h1>
-              <a href="index.html" class="logo">Mealify</a>
-            </h1>
-            <ul class="nav-links" id="navLinks">
-              <!-- <a href="#home" class="close-icon">
+  <div class="navbar">
+    <div class="container">
+      <h1>
+        <a href="index.html" class="logo">Mealify</a>
+      </h1>
+      <ul class="nav-links" id="navLinks">
+        <!-- <a href="#home" class="close-icon">
                 <i class="fa-solid fa-xmark"></i>
               </a> -->
-              <li>
-                <a href="#home">Home</a>
-              </li>
-              <li>
-                <a href="#chefs">Chefs</a>
-              </li>
-              <li>
-                <a href="#gallery">Gallery</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-    
-            <div class="mode-group">
-              <label for="mode" class="dark">
-                <i class="fa-solid fa-moon"></i>
-              </label>
-              <label for="mode" class="light" hidden>
-                <i class="fa-regular fa-sun"></i></label>
-              <input type="checkbox" id="mode" class="mode" hidden="" aria-hidden="">
-            </div>
-    
-            <!-- <a href="#navLinks" class="menu-icon"><i class="fa-solid fa-bars"></i></a> -->
-          </div>
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
+          <a href="#chefs">Chefs</a>
+        </li>
+        <li>
+          <a href="#gallery">Gallery</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      <div class="mode-group" id="toggleTheme">
+        <label for="mode" class="dark">
+          <i class="fa-solid fa-moon"></i>
+        </label>
+        <label for="mode" class="light" hidden>
+          <i class="fa-regular fa-sun"></i></label>
+        <input type="checkbox" id="mode" class="mode" hidden="" aria-hidden="">
+      </div>
+
+      <!-- <a href="#navLinks" class="menu-icon"><i class="fa-solid fa-bars"></i></a> -->
     </div>
-    <section id="home">
-        <div class="header">
-            <div class="container">
-            </div>
+  </div>
+  <section id="home">
+    <div class="header">
+      <div class="container">
+        <div class="header-content">
+          <h2>
+            Enjoy Your Healthy <br>
+            Delicious Food
+          </h2>
+          <p>
+            Sed autem laudantium dolores. Voluptatem itaque ea consequatur
+            eveniet. Eum quas beatae cumque eum quaerat.
+          </p>
+          <div class="btn-group">
+            <a href="#contact" class="btn btn-main">Book a Table</a>
+            <a href="https://youtube.com" target="_blank" class="video-btn">
+              <div class="icon">
+                <i class="fa-solid fa-play"></i>
+              </div>
+              Watch a Video
+            </a>
+          </div>
         </div>
-    </section>
+        <div class="header-image">
+          <img src="./Assets/images/hero-img.png" alt="A black dish filled with a colorful assortment of fresh vegetables and bread.">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="./JS/script.js"></script>
 </body>
 
 </html>

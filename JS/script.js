@@ -1,7 +1,7 @@
 const toggleButton = document.getElementById('toggleTheme');
 const rootElement = document.documentElement; // Cache the root element
 
-toggleButton.addEventListener('click', () => {
+toggleButton.addEventListener('change', () => {
   const currentTheme = rootElement.getAttribute('data-theme');
   
   if (currentTheme === 'dark') {
