@@ -13,6 +13,8 @@
     --padding: 1.2rem 2.525rem;
     --margin-top: 0;
     --margin-bottom: 0;
+    --display-light: none;
+    --display-Dark: flex;
 }
 
 /* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
@@ -24,6 +26,8 @@
     --text-color-primary: white;
     --text-color-secondary: RGB(193, 126, 31);
     --text-color-tertiary: #9f9f9f;
+    --display-light: flex;
+    --display-Dark: none;
 }
 
 /* تطبيق المتغيرات على الصفحة */
@@ -36,7 +40,6 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: var(--font-default);
-
 }
 img{
     width: 100%;
@@ -57,7 +60,15 @@ h6 {
 h2 {
     font-size: 65px;
 }
+.mode-group .light{
+    display: var(--display-light) !important;
+    transition:0.3s;
+}
+.mode-group .dark{
+    display: var(--display-Dark) !important;
+    transition:0.3s;
 
+}
 .navbar {
     background-color: var(--bg-color-tertiary);
     color: var(--text-color-primary);
@@ -164,7 +175,7 @@ h2 {
     background-color: transparent;
     transition: color 0.3s;
     /* تأثير انتقال */
-
+    transform: rotate(-45deg);
 }
 .btn-group .icon{
     display: flex;
@@ -178,9 +189,24 @@ h2 {
     border-style: solid;
     background-color: var(--bg-color-primary);
     cursor: pointer;
+    transform: rotate(45deg);
+    margin-right: 7px;
 }
 .btn-group a{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.btn-group .video-btn{
+    color: var(--text-color-primary);
+}
+.btn-group .btn-main{
+    color: var(--bg-color-primary);
+    background-color: var(--text-color-secondary);
+    padding: 10px 25px;
+    border-radius: 0px 100vh 100vh 100vh; 
+    font-weight: 300;
+    font-size: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    /* تأثير انتقال */
 }
