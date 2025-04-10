@@ -36,6 +36,10 @@ p{
 h2 {
     font-size: 65px;
 }
+section{
+    padding: 50px 0;
+    margin: 0;
+}
 .mode-group .light{
     display: var(--display-light) !important;
     transition:0.3s;
@@ -144,9 +148,6 @@ body:has(#contact:target) li a[href="#contact"]::before{
     font-weight: 900;
 }
 /* home section */
-#home {
-    padding: 50px 0;
-}
 #home .container{
     flex-basis: 50%;
     display: flex;
@@ -190,6 +191,12 @@ body:has(#contact:target) li a[href="#contact"]::before{
     transform: rotate(45deg);
     margin-right: 7px;
 }
+.video-btn:hover .icon i,.video-btn:hover{
+    color: var(--text-color-secondary) !important ;
+    transition: color 0.3s;
+    /* تأثير انتقال */
+}
+
 .btn-group a{
     display: flex;
     justify-content: center;
@@ -201,11 +208,16 @@ body:has(#contact:target) li a[href="#contact"]::before{
 .btn-group .btn-main{
     color: var(--bg-color-primary);
     background-color: var(--text-color-secondary);
-    padding: 10px 25px;
+    padding: 15px 25px;
     border-radius: 0px 100vh 100vh 100vh; 
     font-weight: 300;
     font-size: 15px;
     transition: background-color 0.3s, color 0.3s;
+    /* تأثير انتقال */
+}
+.btn-group .btn-main:hover{
+    background-color: var(--bg-color-quaternary) !important;
+    transition: background-color 0.3s;
     /* تأثير انتقال */
 }
 .header-content{
@@ -222,3 +234,63 @@ body:has(#contact:target) li a[href="#contact"]::before{
     animation: shake 1s infinite; /* 1s = مدة الدورة الواحدة */
   }
   
+/* chefs section */
+
+
+#chefs{
+    background-color: var(--bg-color-primary);
+    color: var(--text-color-primary);
+}
+
+#chefs .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+#chefs .container ,.main-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#chefs .container h2{
+    font-family: var(--font-secondary);
+    color: var(--text-color-tertiary);
+    font-size: 14px;
+    font-weight: 400;
+}
+.main-title p{
+    font-family: var(--font-primary);
+    color: var(--text-color-primary);
+    font-size: 3.125rem;
+    font-weight: 400;
+    display: flex;
+    gap: 10px;
+    line-height: 24px;
+}
+.main-title p span{
+    color: var(--text-color-secondary);
+}
+
+
+.chefs-cards{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+.chefs-cards .card{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+    flex-direction: column;
+    flex-basis: calc(100% / 3 - 20px);
+    border-radius: 5%;
+    overflow: hidden;
+    box-shadow: 0px 0px 14px 0px #0000001b;
+}
+.chefs-cards .card img{
+    width: 100%;
+}

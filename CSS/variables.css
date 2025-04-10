@@ -3,6 +3,7 @@
     --bg-color-primary: white;
     --bg-color-secondary: #EEEEEE;
     --bg-color-tertiary: white;
+    --bg-color-quaternary: RGB(230, 20, 20);
     --text-color-primary: black;
     --text-color-secondary: RGB(206, 18, 18);
     --text-color-tertiary: #9f9f9f;
@@ -26,6 +27,7 @@
     --bg-color-primary: black;
     --bg-color-secondary: #252525;
     --bg-color-tertiary: #171717;
+    --bg-color-quaternary: RGB(215, 140, 35);
     --text-color-quaternary: white;
     --text-color-primary: white;
     --text-color-secondary: RGB(193, 126, 31);
