@@ -7,6 +7,7 @@
     --text-color-secondary: RGB(206, 18, 18);
     --text-color-tertiary: #9f9f9f;
     --text-color-quaternary: #37373F;
+    --text-color-pararaph: RGB(79, 79, 90);
     --font-default: "Roboto", "Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-primary: "Amatic SC", sans-serif;
     --font-secondary: "Inter", sans-serif;
@@ -28,6 +29,7 @@
     --text-color-primary: white;
     --text-color-secondary: RGB(193, 126, 31);
     --text-color-tertiary: #9f9f9f;
+    --text-color-pararaph:RGB(159, 159, 159);
     --display-light: flex;
     --display-Dark: none;
 }
@@ -58,7 +60,15 @@ h6 {
     font-family: var(--font-primary);
     font-weight: 700;
 }
-
+p{
+    color: var(--text-color-pararaph);
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    padding: 24px 0 24px 0;
+    font-size: 16px;
+}
 h2 {
     font-size: 65px;
 }
@@ -176,7 +186,7 @@ body:has(#contact:target) li a[href="#contact"]::before{
 #home .container{
     flex-basis: 50%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
@@ -233,4 +243,10 @@ body:has(#contact:target) li a[href="#contact"]::before{
     font-size: 15px;
     transition: background-color 0.3s, color 0.3s;
     /* تأثير انتقال */
+}
+.header-content{
+    width: 40%;
+}
+.header-image{
+    width: 40%;
 }
