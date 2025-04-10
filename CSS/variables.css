@@ -4,11 +4,13 @@
     --bg-color-secondary: #EEEEEE;
     --bg-color-tertiary: white;
     --bg-color-quaternary: RGB(230, 20, 20);
+    --bg--color5:white;
     --text-color-primary: black;
     --text-color-secondary: RGB(206, 18, 18);
     --text-color-tertiary: #9f9f9f;
     --text-color-quaternary: #37373F;
     --text-color-pararaph: RGB(79, 79, 90);
+    --icon-color: #37373f66;
     --font-default: "Roboto", "Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-primary: "Amatic SC", sans-serif;
     --font-secondary: "Inter", sans-serif;
@@ -28,6 +30,7 @@
     --bg-color-secondary: #252525;
     --bg-color-tertiary: #171717;
     --bg-color-quaternary: RGB(215, 140, 35);
+    --bg--color5:#202020;
     --text-color-quaternary: white;
     --text-color-primary: white;
     --text-color-secondary: RGB(193, 126, 31);

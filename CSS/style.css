@@ -111,6 +111,7 @@ section{
     background-color: var(--text-color-secondary);
     color: var(--text-color-secondary);
     transition: width var(--animation-duration);
+    
 }
 
 body:has(#home:target) li a[href="#home"]::before,
@@ -142,6 +143,7 @@ body:has(#contact:target) li a[href="#contact"]::before{
 .mode-group i {
     cursor: pointer;
     font-size: 25px;
+    margin-right: 20px;
 }
 
 .fa-solid {
@@ -238,7 +240,7 @@ body:has(#contact:target) li a[href="#contact"]::before{
 
 
 #chefs{
-    background-color: var(--bg-color-primary);
+    background-color: var(--bg--color5);
     color: var(--text-color-primary);
 }
 
@@ -287,10 +289,87 @@ body:has(#contact:target) li a[href="#contact"]::before{
     text-align: center;
     flex-direction: column;
     flex-basis: calc(100% / 3 - 20px);
-    border-radius: 5%;
+    border-radius: 0.5rem;
+    transition: scale var(--animation-duration);
     overflow: hidden;
-    box-shadow: 0px 0px 14px 0px #0000001b;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    position: relative;
+    background-color: var(--bg-color-tertiary);
+}
+.chefs-cards h3{
+    font-family: var(--font-secondary);
+    color: var(--text-color-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0.625rem 0;
+    font-size:18.72px;
+}
+.chefs-cards span{
+    font-family: var(--font-secondary);
+    color: var(--text-color-tertiary);
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+    font-size: 14px;
+}
+.chefs-cards .card p{
+    font-family: var(--font-secondary);
+    color: var(--text-color-pararaph);
+    font-weight: 400;
+    margin-bottom: 0.625rem;
+    font-size: 14px;
 }
 .chefs-cards .card img{
     width: 100%;
+}
+.chefs-cards .card picture {
+    width: 100%;
+    position: relative;
+}
+.chefs-cards .card picture:before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    background-image: url("../Assets/images/team-shape.svg");
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 3.75rem;
+    z-index: 1000;
+  }
+.chefs-cards .social-box {
+    list-style: none;
+    background-color: #ffffff4d;
+    width: fit-content;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    position: absolute;
+    top: 1.875rem;
+    right: -3.125rem;
+    transition: right calc(var(--animation-duration) / 2);
+}
+.chefs-cards .card:hover{
+    scale: 1.05;
+    transition: scale var(--animation-duration);
+}
+.chefs-cards .card:hover .social-box {
+    right: 0.625rem;
+    transition: right var(--animation-duration) var(--animation-duration);
+  }
+.chefs-cards .social-box i {
+    font-size: 1.125rem;
+    padding: 0.625rem 0.3125rem;
+    color: var(--icon-color);
+    transition: color var(--animation-duration);
+}
+.chefs-cards .card .social-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.card .card-content{
+
+    padding: 0 20px;
 }
