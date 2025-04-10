@@ -15,6 +15,8 @@
     --margin-bottom: 0;
     --display-light: none;
     --display-Dark: flex;
+    --animation-duration: 400ms;
+    --inline-gap: 0.9375rem;
 }
 
 /* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
@@ -109,7 +111,7 @@ h2 {
 .nav-links li {
     list-style: none;
     padding: 0px 15px;
-
+    position: relative;
 }
 
 .nav-links a {
@@ -117,9 +119,27 @@ h2 {
     color: var(--text-color-tertiary);
     font-size: 17px;
     font-weight: 600;
-    transition: color 0.3s;
+    /* transition: color 0.3s; */
     /* تأثير انتقال */
     font-family: var(--font-default);
+}
+.nav-links li a::before{
+    content: "";
+    display: flex;
+    position: absolute;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color-secondary);
+    color: var(--text-color-secondary);
+    transition: width var(--animation-duration);
+}
+
+body:has(#home:target) li a[href="#home"]::before,
+body:has(#chefs:target) li a[href="#chefs"]::before,
+body:has(#gallery:target) li a[href="#gallery"]::before,
+body:has(#contact:target) li a[href="#contact"]::before{
+    width: calc(100% - (var(--inline-gap) * 2));
 }
 
 .navbar .logo {
