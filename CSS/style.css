@@ -18,6 +18,7 @@
     --display-Dark: flex;
     --animation-duration: 400ms;
     --inline-gap: 0.9375rem;
+    --padding-pararaph: 24px 0 24px 0;
 }
 
 /* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
@@ -66,7 +67,7 @@ p{
     font-weight: 400;
     line-height: 24px;
     margin: 0;
-    padding: 24px 0 24px 0;
+    padding: var(--padding-pararaph);
     font-size: 16px;
 }
 h2 {
@@ -250,3 +251,25 @@ body:has(#contact:target) li a[href="#contact"]::before{
 .header-image{
     width: 40%;
 }
+.header-image {
+    transition: transform 0.3s; /* للتأثير السلس عند بدء/إيقاف الحركة */
+  }
+  
+  .header-image:hover {
+    animation: rotateTranslate 0.5s infinite; /* 1s = مدة الدورة الواحدة */
+  }
+  
+  @keyframes rotateTranslate {
+    0% {
+      transform: rotateZ(0deg) translate(0, 0);
+    }
+    25% {
+      transform: rotateZ(5deg) translate(10px, 10px);
+    }
+    75% {
+      transform: rotateZ(5deg) translate(-10px, -10px);
+    }
+    100% {
+      transform: rotateZ(0deg) translate(0, 0);
+    }
+  }
