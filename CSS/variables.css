@@ -1,0 +1,37 @@
+/* القيم الافتراضية (Light Mode) */
+:root {
+    --bg-color-primary: white;
+    --bg-color-secondary: #EEEEEE;
+    --bg-color-tertiary: white;
+    --text-color-primary: black;
+    --text-color-secondary: RGB(206, 18, 18);
+    --text-color-tertiary: #9f9f9f;
+    --text-color-quaternary: #37373F;
+    --text-color-pararaph: RGB(79, 79, 90);
+    --font-default: "Roboto", "Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --padding: 1.2rem 2.525rem;
+    --margin-top: 0;
+    --margin-bottom: 0;
+    --display-light: none;
+    --display-Dark: flex;
+    --animation-duration: 400ms;
+    --inline-gap: 0.9375rem;
+    --padding-pararaph: 24px 0 24px 0;
+}
+
+/* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
+[data-theme="dark"] {
+    --bg-color-primary: black;
+    --bg-color-secondary: #252525;
+    --bg-color-tertiary: #171717;
+    --text-color-quaternary: white;
+    --text-color-primary: white;
+    --text-color-secondary: RGB(193, 126, 31);
+    --text-color-tertiary: #9f9f9f;
+    --text-color-pararaph:RGB(159, 159, 159);
+    --display-light: flex;
+    --display-Dark: none;
+}
+
