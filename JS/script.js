@@ -15,3 +15,10 @@ toggleButton.addEventListener('change', () => {
 
 
 
+
+    // عند تحميل الصفحة، نقوم بتحديد القسم #home كـ target
+    window.addEventListener('load', function () {
+      if (!window.location.hash) {
+          window.location.hash = '#home'; // تحديد القسم #home كـ target
+      }
+  });

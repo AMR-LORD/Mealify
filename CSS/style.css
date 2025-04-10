@@ -129,7 +129,7 @@ body:has(#contact:target) li a[href="#contact"]::before{
     text-decoration: none;
     color: var(--text-color-primary);
     font-size: 30px;
-    font-family: var(--font-default);
+    font-family:"system-ui", sans-serif;
 }
 
 .navbar .logo::after {
