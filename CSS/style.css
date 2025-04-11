@@ -11,6 +11,7 @@ body {
 }
 img{
     width: 100%;
+    display: block;
 }
 h1,
 h2,
@@ -105,7 +106,7 @@ section{
     content: "";
     display: flex;
     position: absolute;
-    bottom: -3px;
+    bottom: -9px;
     width: 0;
     height: 2px;
     background-color: var(--text-color-secondary);
@@ -120,11 +121,25 @@ body:has(#gallery:target) li a[href="#gallery"]::before,
 body:has(#contact:target) li a[href="#contact"]::before{
     width: calc(100% - (var(--inline-gap) * 2));
 }
+
+
+body:has(#home:target) li a[href="#home"],
+body:has(#chefs:target) li a[href="#chefs"],
+body:has(#gallery:target) li a[href="#gallery"],
+body:has(#contact:target) li a[href="#contact"]{
+color:var(--text-color-primary);
+}
+
+
 .nav-links li a:hover::before {
     width: calc(100% - (var(--inline-gap) * 2));
     transition: width var(--animation-duration);
 }
-
+.nav-links li a:hover {
+    color: var(--text-color-primary);
+    transition: color var(--animation-duration);
+    /* تأثير انتقال */
+}
 .navbar .logo {
     text-decoration: none;
     color: var(--text-color-primary);
@@ -361,6 +376,12 @@ body:has(#contact:target) li a[href="#contact"]::before{
     color: var(--icon-color);
     transition: color var(--animation-duration);
 }
+.chefs-cards .social-box i:hover {
+    color: RGBA(55, 55, 63, 0.9);
+    transition: color var(--animation-duration);
+    font-size: 18px;
+    line-height: 18px;
+}
 .chefs-cards .card .social-box{
     display: flex;
     flex-direction: column;
@@ -372,4 +393,35 @@ body:has(#contact:target) li a[href="#contact"]::before{
 .card .card-content{
 
     padding: 0 20px;
+}
+
+/* gallery section */
+
+
+#gallery .gallery-photos{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    overflow: hidden;
+    position: relative;
+    height: 1000px;
+}
+
+.gallery-photos  picture{
+    position: relative;
+    width: calc(100% / 3 - 20px);
+    border: 3px solid white;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.gallery-photos .layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+    display:none;
 }
