@@ -1,4 +1,20 @@
 /* تطبيق المتغيرات على الصفحة */
+
+:root:has(.mode:checked) {
+    --bg-color-primary: black !important;
+    --bg-color-secondary: #252525 !important;
+    --bg-color-tertiary: #171717 !important;
+    --bg-color-quaternary: RGB(215, 140, 35) !important;
+    --bg--color5: #202020 !important;
+    --bg--color-contact-item: black !important;
+    --text-color-quaternary: white !important;
+    --text-color-primary: white !important;
+    --text-color-secondary: RGB(193, 126, 31) !important;
+    --text-color-tertiary: #9f9f9f !important;
+    --text-color-pararaph: RGB(159, 159, 159) !important;
+    --display-light: flex !important;
+    --display-Dark: none !important;
+}
 body {
     background-color: var(--bg-color-secondary);
     color: var(--text-color-primary);
@@ -13,6 +29,56 @@ img{
     width: 100%;
     display: block;
 }
+/* القيم الافتراضية (Light Mode) */
+/* :root {
+    --bg-color-primary: white;
+    --bg-color-secondary: #EEEEEE;
+    --bg-color-tertiary: white;
+    --bg-color-quaternary: RGB(230, 20, 20);
+    --bg--color5:white;
+    --bg--color-contact-item:RGB(245, 245, 245);
+    --text-color-primary: black;
+    --text-color-secondary: RGB(206, 18, 18);
+    --text-color-tertiary: #9f9f9f;
+    --text-color-quaternary: #37373F;
+    --text-color-pararaph: RGB(79, 79, 90);
+    --icon-color: #37373f66;
+    --font-default: "Roboto", "Open Sans", system-ui, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-primary: "Amatic SC", sans-serif;
+    --font-secondary: "Inter", sans-serif;
+    --padding: 1.2rem 2.525rem;
+    --margin-top: 0;
+    --margin-bottom: 0;
+    --display-light: none;
+    --display-Dark: flex;
+    --animation-duration: 400ms;
+    --inline-gap: 0.9375rem;
+    --padding-pararaph: 24px 0 24px 0;
+    --gap: 0.9375rem;
+
+} */
+
+/* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
+/* [data-theme="dark"] {
+    --bg-color-primary: black;
+    --bg-color-secondary: #252525;
+    --bg-color-tertiary: #171717;
+    --bg-color-quaternary: RGB(215, 140, 35);
+    --bg--color5:#202020;
+    --bg--color-contact-item:black;
+    --text-color-quaternary: white;
+    --text-color-primary: white;
+    --text-color-secondary: RGB(193, 126, 31);
+    --text-color-tertiary: #9f9f9f;
+    --text-color-pararaph:RGB(159, 159, 159);
+    --display-light: flex;
+    --display-Dark: none;
+} */
+/* #toggleTheme :checked ~ *{
+    background-color: red !important;
+    color: white !important; 
+} */
+
 h1,
 h2,
 h3,
@@ -51,7 +117,7 @@ section{
 .mode-group .dark{
     display: var(--display-Dark) !important;
     transition:0.3s;
-
+    
 }
 .navbar {
     background-color: var(--bg-color-tertiary);
@@ -254,10 +320,10 @@ color:var(--text-color-primary);
 }
 .header-image {
     transition: transform 0.3s; /* للتأثير السلس عند بدء/إيقاف الحركة */
-  }
+}
   
   .header-image:hover {
-    animation: shake 1s infinite; /* 1s = مدة الدورة الواحدة */
+      animation: shake 1s infinite; /* 1s = مدة الدورة الواحدة */
   }
   
 /* chefs section */
@@ -359,7 +425,7 @@ color:var(--text-color-primary);
     width: 100%;
     height: 3.75rem;
     z-index: 1000;
-  }
+}
 .chefs-cards .social-box {
     list-style: none;
     background-color: #ffffff4d;
@@ -378,7 +444,7 @@ color:var(--text-color-primary);
 .chefs-cards .card:hover .social-box {
     right: 0.625rem;
     transition: right var(--animation-duration) var(--animation-duration);
-  }
+}
 .chefs-cards .social-box i {
     font-size: 1.125rem;
     padding: 0.625rem 0.3125rem;
@@ -400,7 +466,7 @@ color:var(--text-color-primary);
 }
 
 .card .card-content{
-
+    
     padding: 0 20px;
 }
 
@@ -489,7 +555,7 @@ font-size: 16px;
 }
 .contact .details div div:nth-child(2){
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
@@ -497,7 +563,7 @@ font-size: 16px;
 }
 
 .contact .details div div:nth-child(1){
-    width: 50px;
+    width: 40px;
     height: 50px;
     border-radius: 50%;
     display: flex;
@@ -505,4 +571,17 @@ font-size: 16px;
     align-items: center;
     background-color: var(--bg-color-quaternary);
     color: var(--bg-color-primary);
+    font-size: 18px;
+    font-weight: 400;
 }
+.contact .details div div:nth-child(2) h3{
+    font-family: var(--font-secondary);
+    color: var(--text-color-primary);
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0.625rem 0;
+}
+
+
+
+
