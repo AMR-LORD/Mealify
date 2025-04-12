@@ -544,14 +544,21 @@ font-size: 16px;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
+    padding-bottom: 30px;
+    
 }
 .contact .details div{
-    width: calc(50% - 30px);
+    width: calc(50% - 60px);
     background-color: var(--bg--color-contact-item);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0px 10px;
+    
+}
+.contact .details > div{
+    padding: 1.5625rem;
+
 }
 .contact .details div div:nth-child(2){
     display: flex;
@@ -560,6 +567,7 @@ font-size: 16px;
     flex-direction: column;
     width: 100%;
     align-content: center;
+
 }
 
 .contact .details div div:nth-child(1){
@@ -576,12 +584,28 @@ font-size: 16px;
 }
 .contact .details div div:nth-child(2) h3{
     font-family: var(--font-secondary);
-    color: var(--text-color-primary);
+    color: RGB(125, 125, 125);
     font-size: 20px;
     font-weight: 700;
     margin: 0.625rem 0;
 }
 
+.contact .details div div:nth-child(2) p{
+    font-family: var(--font-secondary);
+    color: var(--text-color-primary);
+    font-weight: 400;
+    margin:0;
+    padding: 0 0 0 0;
+    font-size: 14px;
+}
 
-
+.contact .details div div:nth-child(2) a{
+    font-family: var(--font-secondary);
+    color: var(--text-color-primary);
+    font-weight: 400;
+    margin:0;
+    padding: 0 0 0 0;  
+    font-size: 14px;
+    text-decoration: none;
+}
 
