@@ -609,3 +609,62 @@ font-size: 16px;
     text-decoration: none;
 }
 
+/* form */
+.contact form{
+    background-color: var(--bg-color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 1.875rem #00000014;
+    padding: 1.25rem;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact form input , textarea{
+    align-self: stretch;
+
+}
+.contact form :is(input, textarea) {
+    padding: 0.9375rem 0.9375rem;
+    font-family: inherit;
+    line-height: 1.5; 
+    border: 2px solid var(--bg-color-secondary);
+    color: #212529;
+    transition: border-color var(--animation-duration);
+}
+.contact form textarea{
+    height: 100px;
+    resize: none;
+}
+.contact form :is(input) {
+    height: 25px;
+}
+.input-group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.input-group input{
+    width: calc(50% - 40px);
+}
+
+.contact form button{
+    background-color: var(--text-color-secondary);
+    color: var(--bg-color-primary);
+    margin-top: 1.5625rem;
+    padding: 0.95rem 2.5rem;
+    border-radius: 100vh;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: background-color var(--animation-duration), color var(--animation-duration);
+}
+.contact form button:hover{
+    background-color: var(--bg-color-quaternary) !important;
+    color: var(--bg-color-primary) !important;
+    transition: background-color var(--animation-duration), color var(--animation-duration);
+}
