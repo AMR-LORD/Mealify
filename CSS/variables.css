@@ -5,6 +5,7 @@
     --bg-color-tertiary: white;
     --bg-color-quaternary: RGB(230, 20, 20);
     --bg--color5:white;
+    --bg--color-contact-item:RGB(245, 245, 245);
     --text-color-primary: black;
     --text-color-secondary: RGB(206, 18, 18);
     --text-color-tertiary: #9f9f9f;
@@ -22,6 +23,8 @@
     --animation-duration: 400ms;
     --inline-gap: 0.9375rem;
     --padding-pararaph: 24px 0 24px 0;
+    --gap: 0.9375rem;
+
 }
 
 /* الأنماط الخاصة بالوضع المظلم (Dark Mode) */
@@ -31,6 +34,7 @@
     --bg-color-tertiary: #171717;
     --bg-color-quaternary: RGB(215, 140, 35);
     --bg--color5:#202020;
+    --bg--color-contact-item:black;
     --text-color-quaternary: white;
     --text-color-primary: white;
     --text-color-secondary: RGB(193, 126, 31);

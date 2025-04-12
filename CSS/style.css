@@ -131,6 +131,7 @@ body:has(#chefs:target) li a[href="#chefs"],
 body:has(#gallery:target) li a[href="#gallery"],
 body:has(#contact:target) li a[href="#contact"]{
 color:var(--text-color-primary);
+
 }
 
 
@@ -450,4 +451,58 @@ font-size: 16px;
 }
 .gallery-photos picture:hover .layer{
     top: 0%;
+}
+
+/* contact section */
+
+#contact{
+    background-color: var(--bg-color-tertiary);
+    color: var(--text-color-primary);
+}
+#contact .container{
+    display: flex;
+    flex-direction: column;
+    
+}
+#contact iframe{
+    height: 310px;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.contact .details{
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.contact .details div{
+    width: calc(50% - 30px);
+    background-color: var(--bg--color-contact-item);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0px 10px;
+}
+.contact .details div div:nth-child(2){
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    align-content: center;
+}
+
+.contact .details div div:nth-child(1){
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color-quaternary);
+    color: var(--bg-color-primary);
 }
