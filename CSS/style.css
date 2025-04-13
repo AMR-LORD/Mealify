@@ -155,7 +155,6 @@ section {
     justify-content: space-between;
     width: 100%;
     align-items: center;
-    max-width: 1140px;
 }
 
 .navbar .container .nav-links {
@@ -921,4 +920,31 @@ footer .contact-details ul li i {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* close icon */
+.close-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--text-color-primary);
+    transition: color var(--animation-duration);
+    display: none ;
+}
+
+
+.menu-icon{
+    position: relative;
+    top: 0;
+    right: 0px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--text-color-primary);
+    transition: color var(--animation-duration);
+    display:none;
 }
