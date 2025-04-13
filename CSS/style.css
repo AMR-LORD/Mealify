@@ -15,6 +15,7 @@
     --display-light: flex !important;
     --display-Dark: none !important;
 }
+
 body {
     background-color: var(--bg-color-secondary);
     color: var(--text-color-primary);
@@ -25,10 +26,12 @@ body {
     box-sizing: border-box;
     font-family: var(--font-default);
 }
-img{
+
+img {
     width: 100%;
     display: block;
 }
+
 /* القيم الافتراضية (Light Mode) */
 /* :root {
     --bg-color-primary: white;
@@ -91,7 +94,8 @@ h6 {
     font-family: var(--font-primary);
     font-weight: 700;
 }
-p{
+
+p {
     color: var(--text-color-pararaph);
     font-family: var(--font-secondary);
     font-weight: 400;
@@ -100,25 +104,30 @@ p{
     padding: var(--padding-pararaph);
     font-size: 16px;
 }
-h2{
+
+h2 {
     font-family: var(--font-secondary);
     color: var(--text-color-tertiary);
     font-size: 14px;
     font-weight: 400;
 }
-section{
+
+section {
     padding: 50px 0;
     margin: 0;
 }
-.mode-group .light{
+
+.mode-group .light {
     display: var(--display-light) !important;
-    transition:0.3s;
+    transition: 0.3s;
 }
-.mode-group .dark{
+
+.mode-group .dark {
     display: var(--display-Dark) !important;
-    transition:0.3s;
-    
+    transition: 0.3s;
+
 }
+
 .navbar {
     background-color: var(--bg-color-tertiary);
     color: var(--text-color-primary);
@@ -171,7 +180,8 @@ section{
     /* تأثير انتقال */
     font-family: var(--font-default);
 }
-.nav-links li a::before{
+
+.nav-links li a::before {
     content: "";
     display: flex;
     position: absolute;
@@ -181,13 +191,13 @@ section{
     background-color: var(--text-color-secondary);
     color: var(--text-color-secondary);
     transition: width var(--animation-duration);
-    
+
 }
 
 body:has(#home:target) li a[href="#home"]::before,
 body:has(#chefs:target) li a[href="#chefs"]::before,
 body:has(#gallery:target) li a[href="#gallery"]::before,
-body:has(#contact:target) li a[href="#contact"]::before{
+body:has(#contact:target) li a[href="#contact"]::before {
     width: calc(100% - (var(--inline-gap) * 2));
 }
 
@@ -195,8 +205,8 @@ body:has(#contact:target) li a[href="#contact"]::before{
 body:has(#home:target) li a[href="#home"],
 body:has(#chefs:target) li a[href="#chefs"],
 body:has(#gallery:target) li a[href="#gallery"],
-body:has(#contact:target) li a[href="#contact"]{
-color:var(--text-color-primary);
+body:has(#contact:target) li a[href="#contact"] {
+    color: var(--text-color-primary);
 
 }
 
@@ -205,16 +215,18 @@ color:var(--text-color-primary);
     width: calc(100% - (var(--inline-gap) * 2));
     transition: width var(--animation-duration);
 }
+
 .nav-links li a:hover {
     color: var(--text-color-primary);
     transition: color var(--animation-duration);
     /* تأثير انتقال */
 }
+
 .navbar .logo {
     text-decoration: none;
     color: var(--text-color-primary);
     font-size: 30px;
-    font-family:"system-ui", sans-serif;
+    font-family: "system-ui", sans-serif;
 }
 
 .navbar .logo::after {
@@ -234,31 +246,36 @@ color:var(--text-color-primary);
 .fa-solid {
     font-weight: 900;
 }
+
 /* home section */
-#home .container{
+#home .container {
     flex-basis: 50%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
 }
-#home h2{
+
+#home h2 {
     font-size: 65px;
     font-family: var(--font-primary);
     color: var(--text-color-quaternary);
     font-weight: 700;
 }
-.btn-group{
+
+.btn-group {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 50px;
-    
+
 }
-.btn-group a{
+
+.btn-group a {
     text-decoration: none;
 }
-.btn-group .icon i{
+
+.btn-group .icon i {
     font-size: 16px;
     font-weight: 900;
     color: var(--text-color-primary);
@@ -268,7 +285,8 @@ color:var(--text-color-primary);
     /* تأثير انتقال */
     transform: rotate(-45deg);
 }
-.btn-group .icon{
+
+.btn-group .icon {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -283,75 +301,89 @@ color:var(--text-color-primary);
     transform: rotate(45deg);
     margin-right: 7px;
 }
-.video-btn:hover .icon i,.video-btn:hover{
-    color: var(--text-color-secondary) !important ;
+
+.video-btn:hover .icon i,
+.video-btn:hover {
+    color: var(--text-color-secondary) !important;
     transition: color 0.3s;
     /* تأثير انتقال */
 }
 
-.btn-group a{
+.btn-group a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btn-group .video-btn{
+
+.btn-group .video-btn {
     color: var(--text-color-primary);
 }
-.btn-group .btn-main{
+
+.btn-group .btn-main {
     color: var(--bg-color-primary);
     background-color: var(--text-color-secondary);
     padding: 15px 25px;
-    border-radius: 0px 100vh 100vh 100vh; 
+    border-radius: 0px 100vh 100vh 100vh;
     font-weight: 300;
     font-size: 15px;
     transition: background-color 0.3s, color 0.3s;
     /* تأثير انتقال */
 }
-.btn-group .btn-main:hover{
+
+.btn-group .btn-main:hover {
     background-color: var(--bg-color-quaternary) !important;
     transition: background-color 0.3s;
     /* تأثير انتقال */
 }
-.header-content{
+
+.header-content {
     width: 40%;
 }
-.header-image{
-    width: 40%;
-}
+
 .header-image {
-    transition: transform 0.3s; /* للتأثير السلس عند بدء/إيقاف الحركة */
+    width: 40%;
 }
-  
-  .header-image:hover {
-      animation: shake 1s infinite; /* 1s = مدة الدورة الواحدة */
-  }
-  
+
+.header-image {
+    transition: transform 0.3s;
+    /* للتأثير السلس عند بدء/إيقاف الحركة */
+}
+
+.header-image:hover {
+    animation: shake 1s infinite;
+    /* 1s = مدة الدورة الواحدة */
+}
+
 /* chefs section */
 
 
-#chefs{
+#chefs {
     background-color: var(--bg--color5);
     color: var(--text-color-primary);
 }
 
-#chefs .container{
+#chefs .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-#chefs .container ,.main-title{
+
+#chefs .container,
+.main-title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-#chefs .container h2{
+
+#chefs .container h2 {
     font-family: var(--font-secondary);
     color: var(--text-color-tertiary);
     font-size: 14px;
     font-weight: 400;
 }
-.main-title p{
+
+.main-title p {
     font-family: var(--font-primary);
     color: var(--text-color-primary);
     font-size: 3.125rem;
@@ -360,19 +392,21 @@ color:var(--text-color-primary);
     gap: 10px;
     line-height: 24px;
 }
-.main-title p span{
+
+.main-title p span {
     color: var(--text-color-secondary);
 }
 
 
-.chefs-cards{
+.chefs-cards {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
     flex-wrap: nowrap;
 }
-.chefs-cards .card{
+
+.chefs-cards .card {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -386,35 +420,41 @@ color:var(--text-color-primary);
     position: relative;
     background-color: var(--bg-color-tertiary);
 }
-.chefs-cards h3{
+
+.chefs-cards h3 {
     font-family: var(--font-secondary);
     color: var(--text-color-primary);
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0.625rem 0;
-    font-size:18.72px;
+    font-size: 18.72px;
 }
-.chefs-cards span{
+
+.chefs-cards span {
     font-family: var(--font-secondary);
     color: var(--text-color-tertiary);
     font-weight: 400;
     margin-bottom: 0.625rem;
     font-size: 14px;
 }
-.chefs-cards .card p{
+
+.chefs-cards .card p {
     font-family: var(--font-secondary);
     color: var(--text-color-pararaph);
     font-weight: 400;
     margin-bottom: 0.625rem;
     font-size: 14px;
 }
-.chefs-cards .card img{
+
+.chefs-cards .card img {
     width: 100%;
 }
+
 .chefs-cards .card picture {
     width: 100%;
     position: relative;
 }
+
 .chefs-cards .card picture:before {
     content: "";
     position: absolute;
@@ -426,6 +466,7 @@ color:var(--text-color-primary);
     height: 3.75rem;
     z-index: 1000;
 }
+
 .chefs-cards .social-box {
     list-style: none;
     background-color: #ffffff4d;
@@ -437,43 +478,48 @@ color:var(--text-color-primary);
     right: -3.125rem;
     transition: right calc(var(--animation-duration) / 2);
 }
-.chefs-cards .card:hover{
+
+.chefs-cards .card:hover {
     scale: 1.05;
     transition: scale var(--animation-duration);
 }
+
 .chefs-cards .card:hover .social-box {
     right: 0.625rem;
     transition: right var(--animation-duration) var(--animation-duration);
 }
+
 .chefs-cards .social-box i {
     font-size: 1.125rem;
     padding: 0.625rem 0.3125rem;
     color: var(--icon-color);
     transition: color var(--animation-duration);
 }
+
 .chefs-cards .social-box i:hover {
     color: RGBA(55, 55, 63, 0.9);
     transition: color var(--animation-duration);
     font-size: 18px;
     line-height: 18px;
 }
-.chefs-cards .card .social-box{
+
+.chefs-cards .card .social-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
 }
 
-.card .card-content{
-    
+.card .card-content {
+
     padding: 0 20px;
 }
 
 /* gallery section */
 
 
-#gallery .gallery-photos{
+#gallery .gallery-photos {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -482,7 +528,7 @@ color:var(--text-color-primary);
     height: 1000px;
 }
 
-.gallery-photos  picture{
+.gallery-photos picture {
     position: relative;
     width: calc(100% / 3 - 20px);
     border: 3px solid white;
@@ -490,47 +536,52 @@ color:var(--text-color-primary);
     overflow: hidden;
 }
 
-.gallery-photos .layer{
+.gallery-photos .layer {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 100;
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: white;    
+    color: white;
     background-color: rgba(0, 0, 0, 0.5);
     gap: 10px;
     transition: all var(--animation-duration);
 }
-.layer p{
-padding:0 10px 0 20px;
-color: RGB(221, 221, 221);
-font-size: 16px;
+
+.layer p {
+    padding: 0 10px 0 20px;
+    color: RGB(221, 221, 221);
+    font-size: 16px;
 }
-.layer h2{
+
+.layer h2 {
     color: white;
     font-size: 24px;
 }
-.gallery-photos picture:hover .layer{
+
+.gallery-photos picture:hover .layer {
     top: 0%;
 }
 
 /* contact section */
 
-#contact{
+#contact {
     background-color: var(--bg-color-tertiary);
     color: var(--text-color-primary);
 }
-#contact .container{
+
+#contact .container {
     display: flex;
     flex-direction: column;
-    
+
 }
-#contact iframe{
+
+#contact iframe {
     height: 310px;
     border: none;
     border-radius: 0.5rem;
@@ -538,29 +589,32 @@ font-size: 16px;
     margin-bottom: 20px;
 }
 
-.contact .details{
+.contact .details {
     display: flex;
     gap: 20px;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 100%;
     padding-bottom: 30px;
-    
+
 }
-.contact .details div{
+
+.contact .details div {
     width: calc(50% - 60px);
     background-color: var(--bg--color-contact-item);
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 0px 10px;
-    
+
 }
-.contact .details > div{
+
+.contact .details>div {
     padding: 1.5625rem;
 
 }
-.contact .details div div:nth-child(2){
+
+.contact .details div div:nth-child(2) {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -570,7 +624,7 @@ font-size: 16px;
 
 }
 
-.contact .details div div:nth-child(1){
+.contact .details div div:nth-child(1) {
     width: 40px;
     height: 50px;
     border-radius: 50%;
@@ -582,7 +636,8 @@ font-size: 16px;
     font-size: 18px;
     font-weight: 400;
 }
-.contact .details div div:nth-child(2) h3{
+
+.contact .details div div:nth-child(2) h3 {
     font-family: var(--font-secondary);
     color: RGB(125, 125, 125);
     font-size: 20px;
@@ -590,27 +645,27 @@ font-size: 16px;
     margin: 0.625rem 0;
 }
 
-.contact .details div div:nth-child(2) p{
+.contact .details div div:nth-child(2) p {
     font-family: var(--font-secondary);
     color: var(--text-color-primary);
     font-weight: 400;
-    margin:0;
+    margin: 0;
     padding: 0 0 0 0;
     font-size: 14px;
 }
 
-.contact .details div div:nth-child(2) a{
+.contact .details div div:nth-child(2) a {
     font-family: var(--font-secondary);
     color: var(--text-color-primary);
     font-weight: 400;
-    margin:0;
-    padding: 0 0 0 0;  
+    margin: 0;
+    padding: 0 0 0 0;
     font-size: 14px;
     text-decoration: none;
 }
 
 /* form */
-.contact form{
+.contact form {
     background-color: var(--bg-color-primary);
     display: flex;
     flex-direction: column;
@@ -622,36 +677,43 @@ font-size: 16px;
     flex-wrap: wrap;
     width: 100%;
 }
-.contact form input , textarea{
+
+.contact form input,
+textarea {
     align-self: stretch;
 
 }
+
 .contact form :is(input, textarea) {
     padding: 0.9375rem 0.9375rem;
     font-family: inherit;
-    line-height: 1.5; 
+    line-height: 1.5;
     border: 2px solid var(--bg-color-secondary);
     color: #212529;
     transition: border-color var(--animation-duration);
 }
-.contact form textarea{
+
+.contact form textarea {
     height: 100px;
     resize: none;
 }
+
 .contact form :is(input) {
     height: 25px;
 }
-.input-group{
+
+.input-group {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.input-group input{
+
+.input-group input {
     width: calc(50% - 40px);
 }
 
-.contact form button{
+.contact form button {
     background-color: var(--text-color-secondary);
     color: var(--bg-color-primary);
     margin-top: 1.5625rem;
@@ -663,8 +725,133 @@ font-size: 16px;
     cursor: pointer;
     transition: background-color var(--animation-duration), color var(--animation-duration);
 }
-.contact form button:hover{
+
+.contact form button:hover {
     background-color: var(--bg-color-quaternary) !important;
     color: var(--bg-color-primary) !important;
+    transition: background-color var(--animation-duration), color var(--animation-duration);
+}
+
+/* footer section */
+
+footer {
+    background-image: linear-gradient(#0009, #0009), url(../Assets/images/textured-metal-background.jpg);
+    color: #fff;
+    box-shadow: 0px -1px 5px #0007;
+    background-size: contain;
+}
+footer .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.7625rem 0;
+    height: 362px;
+    
+}
+.about{
+    position: relative;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.about h3{
+    align-self: center;
+}
+.about i{
+    font-size: 1.5rem;
+    color: white;
+}
+.about img{
+    width: 40px;
+    height: 40px;
+}
+.contact-details{
+    position: relative;
+    width: 24%;
+}
+.subscription{
+    position: relative;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.about div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+.about ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+footer h3{
+    font-family: var(--font-secondary);
+    color: white;
+    font-size: 18.72px;
+    font-weight: 700;
+}
+footer .about h3{
+    width: 100%;
+    text-align: center;
+    padding: 0.625rem;
+    border-bottom: 2px solid #ddd6;
+    margin-bottom: 0.625rem;
+}
+footer h2{
+    font-size: 30px;
+    font-family: var(--font-secondary);
+    color: white;
+    font-weight: 700;
+}
+footer h2::after {
+    content: '.';
+    display: inline;
+    color: var(--text-color-secondary);
+    transition: width 0.3s;
+    /* تأثير انتقال */
+}
+footer p{
+    font-family: var(--font-default);
+    color: white;
+    font-weight: 400;
+    padding: 0 5px 0 0;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 10px 0;
+}
+footer .social-links{
+    padding-top: 20px;
+    position: relative;
+}
+
+.subscription .sunscription-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+}
+.sunscription-group input{
+    flex-grow: 1;
+    padding-right: 100px;
+}
+.sunscription-group button{
+    background-color: var(--text-color-secondary);
+    color: var(--bg-color-primary);
+    padding: 0.95rem 2.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
     transition: background-color var(--animation-duration), color var(--animation-duration);
 }
